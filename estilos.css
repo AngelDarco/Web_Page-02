@@ -27,8 +27,6 @@ overflow-x: hidden;
 
 .container--modifier{
     width: 60%;
-   
-
 }
 
 .hero{
@@ -87,17 +85,16 @@ overflow-x: hidden;
     justify-content: space-between;
     align-items: center;
     padding:0;
-
 }
 
 .mockup{
     object-fit: cover;
-    width: 48%;
+    width: 100%;
     height: calc(100vh-70px);
-    margin-right: 20px;
+    margin: 10px 20px;
 }
 .mockup:hover{
-    box-shadow: 0 0 20px #f0f;
+    box-shadow: 0 0 5px #f0f;
 }
 
 .hero__textos{
@@ -167,8 +164,6 @@ overflow-x: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-
 }
 
 .card{
@@ -240,18 +235,21 @@ overflow-x: hidden;
 
 .container-bg{
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.container-bg .card{
+    width: 49%;
+    height: 50%;
+    margin: 10px 0;
 }
 
-
 .background{
-    width: 68%;
+    width: 49%;
     height: 290px;
     border-radius: 10px;
-    position:relative;
-    margin-bottom: 60px;
 }
 
 .background img{
@@ -303,7 +301,7 @@ overflow-x: hidden;
     background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
     border-radius: 10px;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
 }
 
 .testimony__img{
@@ -322,13 +320,13 @@ overflow-x: hidden;
     color: #fff;
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: #f0f;
+    box-shadow: 0 0 5px #f0f;
     padding: 15px 8px;
     display: flex;
     align-items: center;
     border: 1px solid #fff;
+    height: 25%;
 }
-
 
 .testimony__logo{
     font-size: 20px;
@@ -353,8 +351,9 @@ overflow-x: hidden;
 }
 
 .testimony__history{
-    font-size: 21px;
+    font-size: 17px;
     font-weight: 300;
+    text-align: center;
 }
 
 .testimony__info{
@@ -376,16 +375,11 @@ overflow-x: hidden;
     object-position: center top;
 }
 
-
-
-
-
 .check{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-
 }
 
 .check__item{
@@ -572,4 +566,43 @@ overflow-x: hidden;
 .item__contact--gold{
     background: var(--gold1);
     color: white;
+}
+
+
+@media (max-width: 800px) {
+    .hero__main{
+        flex-flow: column;
+        overflow: hidden;
+    }
+    .hero__textos{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container-bg{
+        flex-flow: column;
+        margin-top: 30px;
+    }
+     .card{
+        width: 70%;
+    }
+    .container-cards{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .testimony .container{
+        flex-flow: column;
+        align-items: center;
+    }
+    .testimony__card{
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    .hero__main{
+        display: block;
+    }
+
 }
